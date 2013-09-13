@@ -1,9 +1,10 @@
 {
 	"id": "slim-surveys",
 	"name": "SlimSurveys",
+	"app_version": "0.0.1",
+	"cloudapp_protocol_version": "1.0.0",
 	"description": "SlimSurveys is a micro-survey platform. We help people improve survey completion and abandonment rates with surveys that can be completed in 30 seconds or less",
 	"icon": "[place_here_your_url]/icon.png",
-	"category": "applications",
 	"developer": {
 		"id": "slim-surveys",
 		"name": "SlimSurveys",
@@ -11,10 +12,6 @@
 		"email": "support@slimsurveys.com",
 		"icon": "[place_here_your_url]"
 	},
-	"plans": [{
-		"id": "test",
-		"name": "Test plan"
-	}],
 	"dashboards": [{
 		"id": "instances",
 		"title": "Instances",
@@ -25,7 +22,6 @@
 		"component": "VisitorsStatistics",
 		"script": "[place_here_your_url]/app.js"
 	},
-	"version": "0.0.1",
 	"endpoints": {
 		"instance/add": {"url": "[place_here_your_url]"},
 		"instance/remove": {"url": "[place_here_your_url]"}
