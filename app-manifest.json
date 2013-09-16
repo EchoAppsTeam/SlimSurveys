@@ -18,7 +18,7 @@
 		"script": "[place_your_url_here]/dashboard.js",
 		"component": "SlimSurveys.Apps.Surveys.Dashboard"
 	}],
-	"application": {
+	"client_widget": {
 		"component": "SlimSurveysAdapter",
 		"script": "[place_your_url_here]/app.js"
 	},
