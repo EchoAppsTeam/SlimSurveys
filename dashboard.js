@@ -39,7 +39,9 @@ dashboard.renderers.input = function(element) {
 dashboard.methods.setValue = function(value) {
 	if (value !== this.get("data.surveyId")) {
 		this.set("data.surveyId", value);
-		this.update(this.get("data"));
+		this.update({
+			"config": this.get("data")
+		});
 	}
 };
 
