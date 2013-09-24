@@ -3,9 +3,11 @@
 
 var $ = jQuery;
 
-if (Echo.Control.isDefined("SlimSurveys.Apps.Surveys.Dashboard")) return;
+if (Echo.AppServer.Dashboard.isDefined("SlimSurveys.Apps.Surveys.Dashboard")) return;
 
 var dashboard = Echo.AppServer.Dashboard.manifest("SlimSurveys.Apps.Surveys.Dashboard");
+
+dashboard.inherits = Echo.Utils.getComponent("Echo.AppServer.Dashboards.AppSettings");
 
 dashboard.labels = {
 	"surveyId": "Survey Id"
@@ -34,14 +36,10 @@ dashboard.renderers.input = function(element) {
 		});
 };
 
-dashboard.methods.getValue = function() {
-	return this.get("data");
-};
-
 dashboard.methods.setValue = function(value) {
 	if (value !== this.get("data.surveyId")) {
 		this.set("data.surveyId", value);
-		this.update();
+		this.update(this.get("data"));
 	}
 };
 
